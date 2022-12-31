@@ -1,0 +1,105 @@
+.card {
+    padding: 4em;
+    height: 85vh;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #000;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card-number {
+    position: absolute; 
+    top: 3%;
+    left: 3%;
+    z-index: 100; 
+    font-size: 8em;
+    text-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    box-shadow: rgba(119, 119, 119, 0.258) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background-color: rgb(255, 255, 255);
+    width: 1.1em; 
+    height: 1.1em; 
+    line-height: 1.1em;
+    text-align: center;
+    border-radius: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-image {
+    border: 5px solid #fff;
+    border-radius: 15px;
+    height: 500px;
+    width: 700px;
+    box-shadow: rgba(119, 119, 119, 0.258) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    rotate: 0.8deg;
+}
+
+.mountain-name {
+    position: absolute; 
+    left: 1.4em; 
+    bottom:14%; 
+    z-index: 100; 
+    font-family: 'Luckiest Guy', serif;
+    color: #000;
+    font-size: 5em;
+}
+
+.card-body {
+    display: flex; 
+    height: 85vh;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 1em; 
+    position: absolute; 
+    top: 3%;
+    right: 12.5%;
+}
+
+.mountain-information {
+    margin-left: 2em;
+    padding: 0.2em 1em; 
+    border: 5px dotted rgba(27, 91, 155, 0.681);
+    justify-content: center;
+    width: 100%;
+    height: 83vh;
+    border-radius: 15px;
+    line-height: 2em;
+}
+
+.info-cat {
+    font-weight: 600;
+    font-size: 1.0em;
+}
+
+.information-text {
+    font-size: 1.1em;
+    padding: 0.2em 0em;
+}
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .card {
+        flex-direction: column;
+    }
+    .mountain-name {
+        top: 3%;
+        left: 22%;
+        color: rgb(0, 0, 0);
+        font-size: 4.3em;
+    }
+    .card-title {
+        top: 58%;
+        left: -70%;
+        rotate: -90deg;
+    }
+    .mountain-information {
+        margin-top: 1em; 
+    }
+}
