@@ -102,4 +102,54 @@
     .mountain-information {
         margin-top: 1em; 
     }
+    
+}
+
+@media only screen 
+  and (min-device-width: 350px) 
+  and (max-device-width: 844px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .card {
+        flex-direction: column;
+        padding: .5em; 
+        height: 98vh;
+    }
+    .card-image {
+        width: 98%;
+    }
+
+    .card-number {
+        font-size: 4em;
+        top: 2%;
+        left: 5%;
+    }
+
+    .mountain-information {
+        margin: 0; 
+        border: none; 
+    }
+
+    .mountain-name {
+        font-size: 2em;
+        top: 4.5%;
+        left: 30%;
+        color: #fff;
+        text-align: end;
+    }
+
+    .card-title {
+        display: none; 
+    }
+    .information-text {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
 }
