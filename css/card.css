@@ -113,7 +113,7 @@
     .card {
         flex-direction: column;
         padding: .5em; 
-        height: 105addvh;
+        height: 105vh;
         border: none; 
         margin-bottom: 2em; 
     }
