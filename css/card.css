@@ -118,7 +118,8 @@
         margin-bottom: 2em; 
     }
     .card-image {
-        width: 98%;
+        width: 100%;
+        margin-left: .8em;
     }
 
     .card-number {
