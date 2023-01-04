@@ -2,6 +2,7 @@ let mountains = [
     {
         "image": {
             "ref": "assets/images/mount-everest-blue-sky.jpg",
+            "ref2": "assets/images/Everest-3D-Map.jpeg",
             "alt": "Image of Mount Everest from an airplane"
         },
         "number": 1,
@@ -16,6 +17,7 @@ let mountains = [
     {
         "image": {
             "ref": "assets/images/K2.jpeg",
+            "ref2": "",
             "alt": "Image of K2"
         },
         "number": 2,

@@ -10,7 +10,7 @@ class CardComponent {
         this.info = cardDetails.info; 
         this.image = cardDetails.image;
 
-        // this.modal = new CardDetailsModal(this);
+        this.modal = new CardDetailsModal(this);
     }
 
     render() {
@@ -47,50 +47,55 @@ class CardComponent {
 
       let el = tempDiv.firstElementChild;
 
-    //   el.addEventListener("click", event => this.handleClick(event));
+      el.addEventListener("click", event => this.handleClick(event));
 
       return el; 
     }
 
-    // handleClick(event) {
-    //     this.modal.show();
-    // }
+    handleClick(event) {
+        this.modal.show();
+    }
 }
 
-// class CardDetailsModal {
-//     constructor(cardComponent) {
-//         this.parent = cardComponent;
-//         this.isOpen = false; 
-//     }
-
-//     show() {
-//         if (this.isOpen) {
-//             return false; 
-//         }
-
-//         this.modalElement = this.render();
-//         document.body.append(this.modalElement);
-
-//         this.isOpen = true;
-//     }
-
-//     exit(event) {
-//         if (event.currentTarget != event.target) {
-//             return false;
-//         }
-
-//         this.modalElement.remove();
-
-//         this.isOpen = false; 
-//     }
-
-//     render() {
-//         let div = document.createElement("div");
-//         div.innerHTML = `
-//         <div class="card-modal">
-//             <div clas="modal-content">
-//                 <image class="modal-image" src=${this.parent.image.ref}>
-//         `
-//     }
-// }
-
+class CardDetailsModal {
+    constructor(cardComponent) {
+      this.parent = cardComponent; 
+      this.isOpen = false;
+    }
+  
+    show() {
+      if(this.isOpen) return false; 
+  
+      this.modalElement = this.render();
+      document.body.append(this.modalElement);
+  
+      this.isOpen = true;
+    }
+  
+    exit(event) {
+      if(event.currentTarget == event.target) {
+        return false;
+      }
+  
+      this.modalElement.remove();
+  
+      this.isOpen = false; 
+    }
+    
+    render() {
+      let div = document.createElement("div");
+      div.innerHTML = `
+        <div class="card-modal">
+          <div class="modal-content">
+            <image class="modal-img" src=${this.parent.image.ref2}>
+          </div>
+        </div>
+        `
+  
+    let el = div.firstElementChild;
+    
+    el.addEventListener("click", event => this.exit(event));
+  
+    return el;
+    }
+  }

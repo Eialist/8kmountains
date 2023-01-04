@@ -79,6 +79,24 @@
     padding: 0.2em 0em;
 }
 
+.card-modal {
+    width:  800px; 
+    height: 600px; 
+    top: 10%; 
+    left:13%; 
+    background-color: aliceblue;
+    position: fixed;
+    z-index: 101; 
+    box-shadow: rgba(0, 0, 0, 0.659) 0px 5px 15px;
+    border-radius: 15px;
+    padding: 2em;
+}
+
+.modal-img {
+    width: 790px;
+}
+
+
 
 @media only screen 
   and (min-device-width: 768px) 
